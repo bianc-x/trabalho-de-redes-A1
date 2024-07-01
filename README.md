@@ -1,19 +1,38 @@
-Servidor HTTP Simulado em JavaScript
+Simulação de Servidor HTTP com JavaScript no Navegador
 
-Este projeto é um exemplo simples de como simular um servidor HTTP usando JavaScript diretamente no navegador. Ele demonstra como criar rotas básicas e responder a diferentes solicitações HTTP com respostas simples.
 
-Funcionalidades
+Motivação
 
-Servidor HTTP Simulado: Capaz de lidar com requisições HTTP simuladas diretamente no navegador.
-Roteamento Simulado: Define rotas simples como / e /contato.
-Respostas Simuladas: Envia respostas de texto simples e JSON baseadas na URL da requisição.
+Entender os conceitos básicos de servidores HTTP e como eles funcionam é fundamental para qualquer desenvolvedor web. Este projeto visa desmistificar o funcionamento interno dos servidores HTTP de uma maneira prática e interativa. Ao simular um servidor HTTP diretamente no navegador usando JavaScript, podemos focar nos conceitos fundamentais de roteamento e manipulação de requisições HTTP, sem a complexidade adicional de um servidor real ou Node.js.
 
-Estrutura do Projeto
+Objetivo
 
-O projeto consiste em um único arquivo HTML (index.html) que contém o código JavaScript para simular o servidor HTTP. Não é necessário nenhum ambiente de servidor como Node.js; tudo é executado no navegador.
+O objetivo deste projeto é duplo:
 
-Ao executar este código no navegador e abrir as Ferramentas de Desenvolvedor (guia "Console"), deverá aparecer:
+Criar um servidor HTTP simulado que possa responder a diferentes tipos de solicitações, como texto simples e JSON.
+Aprender sobre roteamento – a maneira como diferentes URLs são mapeadas para diferentes respostas no servidor.
+Descrição do Experimento
+Descrição
+Este projeto consiste em um 'Servidor HTTP Simulado' utilizando JavaScript no navegador. O servidor simulado tem duas rotas principais:
 
-Status da Requisição: Para cada requisição simulada (/ e /contato), você verá o status da resposta (200, 404, etc.).
-Cabeçalhos da Resposta: Os cabeçalhos HTTP configurados para cada resposta serão exibidos, mostrando o tipo de conteúdo (Content-Type).
-Corpo da Resposta: O corpo da resposta enviado ao cliente, seja texto simples ou JSON, dependendo da rota acessada.
+Rota /: Responde com a mensagem "Olá Mundo!".
+Rota /contato: Responde com um objeto JSON contendo informações de contato.
+As respostas das requisições são exibidas no console do navegador. Além disso, utilizamos o Wireshark para capturar e analisar a troca de pacotes, oferecendo uma visão prática do tráfego de rede.
+
+
+Conexão com a Disciplina de Redes
+
+Roteamento: Entender como diferentes URLs são tratadas pelo servidor.
+Protocolo HTTP: Estudar os métodos HTTP e cabeçalhos de resposta.
+Análise de Pacotes: Utilizar o Wireshark para analisar o tráfego de rede gerado pelas requisições HTTP.
+Pré-requisitos de Uso
+Software Necessário
+Navegador moderno (Google Chrome, Firefox, etc.)
+Wireshark (para captura e análise de pacotes)
+Ferramentas de Desenvolvedor do navegador (F12).
+
+Componentes Principais
+
+Função handleRequest: Define as respostas para diferentes URLs.
+Função requestHandler: Processa as requisições e define os cabeçalhos e o corpo da resposta.
+Simulação do Servidor: Objeto http simula a criação e escuta do servidor.
